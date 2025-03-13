@@ -122,7 +122,6 @@ pub fn forward(_attr_input: TokenStream, item: TokenStream) -> TokenStream {
                     wait_dll_proxy_init = sym crate::wait_dll_proxy_init,
                     ORIG_FUNCS_PTR = sym crate::ORIG_FUNCS_PTR,
                     orig_index = const #orig_index_ident,
-                    options(noreturn)
                 )
             }
 
@@ -138,7 +137,6 @@ pub fn forward(_attr_input: TokenStream, item: TokenStream) -> TokenStream {
                     wait_dll_proxy_init = sym crate::wait_dll_proxy_init,
                     ORIG_FUNCS_PTR = sym crate::ORIG_FUNCS_PTR,
                     orig_index = const #orig_index_ident,
-                    options(noreturn)
                 )
             }
         }
@@ -293,7 +291,6 @@ pub fn pre_hook(attr_input: TokenStream, item: TokenStream) -> TokenStream {
                         ORIG_FUNCS_PTR = sym crate::ORIG_FUNCS_PTR,
                         orig_index = const #orig_index_ident,
                         proxygen_pre_hook_func = sym #hook_func_name,
-                        options(noreturn)
                     );
                 }
             ))
